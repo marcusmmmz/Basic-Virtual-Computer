@@ -8,19 +8,22 @@
     <style>
         * {
             font-size: xx-large;
+            background: black;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div>
-        RAM
-        <p id="addresses"></p>
+        <button onclick="CPU.cycle()">Cycle</button>
+        <button onclick="CPU.start()">Start CPU</button>
+        <button onclick="CPU.stop()">Stop CPU</button>
     </div>
-    <br>
-    <div>
-        CPU
-        <p id="cpu"></p>
-    </div>
+
+    RAM: <p id="addresses"></p>
+    CPU: <p id="cpu"></p>
+    Instructions: <p id="instructions"></p>
+
     <script src="./index.js"></script>
 </body>
 </html>
