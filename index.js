@@ -16,14 +16,14 @@ let CPU = {
     register:0, //Instruction register
     accumulator:0,
 
-    instruction:0, //1st part of register
-    argument:0, //2nd part of register
+    get instruction() { return this.register >> 4 },
+    get argument() { return this.register - (this.instruction << 4) },
+
     fetch() {
         this.register = RAM.adresses[this.address]
     },
     decode() {
-        this.instruction = this.register >> 4
-        this.argument = this.register - (this.instruction << 4)
+        
     },
     execute() {
         let instruction = this.instruction
@@ -92,10 +92,11 @@ function displayInstruction(number) {
             }
         }
     }
+    return "NULL"
 }
 
 let RAM = {
-    adresses : [
+    adresses : new Uint8Array([
         instruction("LOAD", 6),
         instruction("ADD", 7),
         instruction("STORE", 6),
@@ -104,9 +105,10 @@ let RAM = {
         0,
         1,
         1,
-    ],
+    ]),
 }
 
+let tracked = []
 function updateGUI() {
     if (!isNode) {
         let output = ""
@@ -134,16 +136,31 @@ function updateGUI() {
 
         output = ""
 
-        output += `Clock: ${CPU.clock} <br/>`
-        output += `Address: ${CPU.address} <br/>`
-        output += `Register: ${
-            displayInstruction(CPU.instruction) || "NULL"
-        } ${
-            CPU.argument
-        } <br/>`
-        output += `Accumulator: ${CPU.accumulator} <br/>`
+        let headerValueFormat = (header, value) => {
+            return `<div><p>${header}:</p> <p>${value}</p></div>`
+        }
+
+        output += headerValueFormat("Clock", CPU.clock )
+        output += headerValueFormat("Accumulator", CPU.accumulator)
+        output += headerValueFormat("Address", CPU.address)
+        output += headerValueFormat("Register", `${displayInstruction(CPU.instruction)} ${CPU.argument}`)
 
         document.getElementById("cpu").innerHTML = output
+
+        output = ""
+
+        for (const tracker of tracked) {
+            output += RAM.adresses[parseInt(tracker)] + "<br/>"
+        }
+
+        document.getElementById("tracked").innerHTML = output
     }
 }
+
+function addTracker() {
+    tracked.push(
+        document.getElementById("add-tracker").value
+    )
+}
+
 updateGUI()

@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Machine</title>
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        * {
-            font-size: xx-large;
-            background: black;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <div>
-        <button onclick="CPU.cycle()">Cycle</button>
-        <button onclick="CPU.start()">Start CPU</button>
-        <button onclick="CPU.stop()">Stop CPU</button>
+    
+
+    <div id="computer">
+
+        <div id="gui-tracker">
+            <input type="number" id="add-tracker">
+            <button onclick='addTracker()'>Track</button>
+            <p id="tracked"></p>
+        </div>
+        <div id="gui-cpu">
+            <button onclick="CPU.cycle()">Cycle</button>
+            <button onclick="CPU.start()">Start CPU</button>
+            <button onclick="CPU.stop()">Stop CPU</button>
+            <div id="cpu"></div>
+        </div>
+
+        <div id="gui-ram">
+            RAM: <p id="addresses"></p>
+        </div>
+        <div id="dp-kb">
+            <div id="gui-dp">
+                Instructions: <p id="instructions"></p>
+            </div>
+            <div id="gui-kb"></div>
+        </div>
     </div>
 
-    RAM: <p id="addresses"></p>
-    CPU: <p id="cpu"></p>
-    Instructions: <p id="instructions"></p>
-
     <script src="./index.js"></script>
+    
 </body>
 </html>
