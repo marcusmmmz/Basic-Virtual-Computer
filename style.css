@@ -1,54 +1,123 @@
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 110%;
-    color: white;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
 }
-
-button, input {
-    background: black;
-}
-
 body {
     background: black;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
     margin: 0px;
 }
 
 #computer {
     width: 100%;
-    height: 98vh;
     display: grid;
-    gap: 2% 20%;
+    gap: 2%;
     grid-template-columns: 40% 40%;
     grid-template-rows: 35% 65%;
 }
-
 #computer > div {
-    background: #1b1b1b;
+    background: #0f0f0f;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
 }
 
-#dp-kb {
-    display: grid;
-    gap: 2% 20%;
-    grid-template-rows: 70% 28%;
+
+#gui-tracker{
+    padding-top: 8%;
+    padding-right: 25%;
+    border-radius: 10px;
+}
+#gui-tracker input{
+    font-size: 25px;
+    color: #1f1f1f;
+    background-color: #9f9f9f;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+#gui-tracker button{
+   margin-left: 55%;
+   margin-top: 4%;
+   font-size: 35px;
+   border-radius: 8px;
+   border: none;
+   background: #9f9f9f;
+   color: #1f1f1f;
+   cursor: pointer;
+}
+#gui-tracker p{
+    margin-left: 43%;
+    font-size: 25px;
+    color: white;
 }
 
-#gui-cpu > div {
-    display: flex;
-    gap: 0 40px;
-    flex-wrap: wrap;
-    justify-content: center;
+
+#gui-cpu{
+    border-radius: 10px;
+    padding-top: 8%;
+    padding-right: 20%;
+    margin-left: 25%;
+}
+#gui-cpu button{
+    font-size: 18px;
+    margin-left: 15%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+       background: #9f9f9f;
+   color: #1f1f1f;
+}
+#cpu{
+    display: inline-flex;
+    margin-left:  15%;
+    font-size: 20px;
+    color: white;
+}
+#cpu div{
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 4%;
+    text-align: center;
+    border: 1px solid #9f9f9f;
 }
 
-#gui-cpu p {
-    margin: 0;
-    text-align: left;
+
+#gui-ram{
+    border-radius: 10px;
+    margin-top: 8%;
+    padding-right: 25%;
+    font-size: 18px;
+}
+#gui-ram h1{
+    color: #9f9f9f;
+    margin-top: 8%;
+    font-size: 30px;
+    margin-left: 38%;
+}
+#gui-ram p{
+    color: #9f9f9f;
+    margin-left: 35%;
 }
 
-#cpu div {
-    display: flex;
-    flex-direction: column;
+
+#dp-kb{
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-left: 25%;
+    padding-right: 20%;
+    font-size: 18px;
+}
+#gui-dp{
+    color: #9f9f9f;
+    margin-left: 35%;
+    margin-top: 8%;
+}
+#gui-dp p{
+    color: #9f9f9f;
+    margin-left: 18%;
 }

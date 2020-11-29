@@ -6,6 +6,11 @@
     <title>Virtual Machine</title>
     <link rel="stylesheet" href="style.css">
 
+<!--font from google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     
@@ -13,10 +18,11 @@
     <div id="computer">
 
         <div id="gui-tracker">
-            <input type="number" id="add-tracker">
+            <input type="number" id="add-tracker" placeholder="Type Here">
             <button onclick='addTracker()'>Track</button>
             <p id="tracked"></p>
         </div>
+
         <div id="gui-cpu">
             <button onclick="CPU.cycle()">Cycle</button>
             <button onclick="CPU.start()">Start CPU</button>
@@ -25,13 +31,20 @@
         </div>
 
         <div id="gui-ram">
-            RAM: <p id="addresses"></p>
+            <h1>RAM:</h1>
+            <p id="addresses"></p>
         </div>
+
+
         <div id="dp-kb">
+
             <div id="gui-dp">
-                Instructions: <p id="instructions"></p>
+                <h1>Instructions:</h1>
+                <p id="instructions"></p>
             </div>
+
             <div id="gui-kb"></div>
+
         </div>
     </div>
 
