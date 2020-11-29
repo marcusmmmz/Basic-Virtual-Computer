@@ -3,7 +3,7 @@
     text-align: left;
 }
 body {
-    background-image: url("matrix.jpeg");
+    background: black;
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
@@ -21,7 +21,6 @@ body {
     background: #0f0f0f;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
 }
 
 
@@ -32,8 +31,8 @@ body {
 }
 #gui-tracker input{
     font-size: 25px;
-    color: green;
-    background-color:black;
+    color: #1f1f1f;
+    background-color: #9f9f9f;
     border: none;
     border-radius: 10px;
     text-align: center;
@@ -47,8 +46,8 @@ body {
    font-size: 35px;
    border-radius: 8px;
    border: none;
-   background: black;
-   color: green;
+   background: #9f9f9f;
+   color: #1f1f1f;
    cursor: pointer;
 }
 #gui-tracker p{
@@ -67,11 +66,11 @@ body {
 #gui-cpu button{
     font-size: 18px;
     margin-left: 15%;
-    background: black;
     border: none;
     cursor: pointer;
-    color: green;
     border-radius: 5px;
+       background: #9f9f9f;
+   color: #1f1f1f;
 }
 #cpu{
     display: inline-flex;
@@ -84,7 +83,7 @@ body {
     padding-left: 5px;
     margin-top: 4%;
     text-align: center;
-    border: 1px solid green;
+    border: 1px solid #9f9f9f;
 }
 
 
@@ -95,13 +94,13 @@ body {
     font-size: 18px;
 }
 #gui-ram h1{
-    color: #32CD32;
+    color: #9f9f9f;
     margin-top: 8%;
     font-size: 30px;
     margin-left: 38%;
 }
 #gui-ram p{
-    color: #00CED1;
+    color: #9f9f9f;
     margin-left: 35%;
 }
 
@@ -114,11 +113,11 @@ body {
     font-size: 18px;
 }
 #gui-dp{
-    color: #32CD32;
+    color: #9f9f9f;
     margin-left: 35%;
     margin-top: 8%;
 }
 #gui-dp p{
-    color: #00CED1;
+    color: #9f9f9f;
     margin-left: 18%;
 }
