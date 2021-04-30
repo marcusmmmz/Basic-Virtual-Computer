@@ -5,7 +5,7 @@
 	let addressesEl : HTMLParagraphElement
 	let cpuEl : HTMLDivElement
 	let trackedEl : HTMLParagraphElement
-	const addTrackerEl = document.getElementById("add-tracker") as HTMLInputElement
+	let addTrackerEl : HTMLInputElement
 
 	const instructions : {[key:string]:number} = {
 		LOAD: 0b0001,
@@ -167,7 +167,7 @@
 
 <div id="computer">
 	<div id="tracker">
-			<input type="number" id="add-tracker">
+			<input bind:this={addTrackerEl} type="number" id="add-tracker">
 			<button on:click={()=>addTracker()}>Track</button>
 			<p bind:this={trackedEl} id="tracked"></p>
 	</div>

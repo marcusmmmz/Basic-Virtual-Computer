@@ -1,4 +1,6 @@
 [build]
     command = "npm run build"
-    publish = "build"       # directory containing static files
-    functions = "functions" # directory containing serverless function
+    publish = "build/"       # directory containing static files
+    functions = "functions/" # directory containing serverless function
+[dev]
+    framework = "svelte"
